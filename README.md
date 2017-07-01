@@ -1,6 +1,6 @@
 # Phenomic-React-MobX-TypeScript
 
-Minimal boilerplate for a single-page app using Phenomic, MobX, React and TypeScript with TSX for use with the free Visual Studio Code editor
+Minimal boilerplate for a static website using Phenomic, MobX, React and TypeScript with TSX for use with the free Visual Studio Code editor
 
 Initial install:
 
