@@ -39,5 +39,4 @@ var TimerView = (function (_super) {
 TimerView = __decorate([
     mobx_react_1.observer
 ], TimerView);
-;
 exports.default = TimerView;

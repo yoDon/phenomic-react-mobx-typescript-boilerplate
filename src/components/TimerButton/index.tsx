@@ -1,6 +1,6 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { observer } from 'mobx-react';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { observer } from 'mobx-react'
 import appState from '../../stores/AppState'
 
 @observer
@@ -13,13 +13,13 @@ class TimerView extends React.Component<{}, {}> {
                     Seconds passed: {appState.timer}
                 </button>
             </div>
-        );
+        )
      }
 
      onReset = () => {
-         appState.resetTimer();
+         appState.resetTimer()
      }
 
-};
+}
 
-export default TimerView;
+export default TimerView

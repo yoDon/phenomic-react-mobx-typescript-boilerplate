@@ -1,12 +1,12 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import Head from 'react-helmet'
-import DevTools from 'mobx-react-devtools';
+import DevTools from 'mobx-react-devtools'
 
 class Html extends React.Component<{body: any, state:any, script:any}, {}> {
 
   render() {
-    const helmet = Head.renderStatic();
+    const helmet = Head.renderStatic()
     return (
       <html { ...helmet.htmlAttributes.toComponent() } >
         <head>

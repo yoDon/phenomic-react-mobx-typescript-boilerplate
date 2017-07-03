@@ -28,30 +28,20 @@ var Html = (function (_super) {
     }
     Html.prototype.render = function () {
         var helmet = react_helmet_1.default.renderStatic();
-        return (
-        //
-        // DONTODO somewhere mangle js and css paths for CDN
-        // ("link", { key: "phenomic.css." + i, rel: "stylesheet", href: "//az707230.vo.msecnd.net/201704test02"+file })
-        // ( "script", { key: "phenomic.js." + i, src: "//az707230.vo.msecnd.net/201704test02"+file } 
-        //
-        React.createElement("html", __assign({}, helmet.htmlAttributes.toComponent(), { "data-loginid": "{% if customer %}shp-{{ customer.id }}{% endif %}", "data-username": "{% if customer %}{{ customer.metafields.filmmaker.username }}{% endif %}" }),
+        return (React.createElement("html", __assign({}, helmet.htmlAttributes.toComponent()),
             React.createElement("head", null,
                 helmet.base.toComponent(),
                 helmet.title.toComponent(),
-                React.createElement("meta", { name: "robots", content: "noindex, nofollow" }),
                 helmet.meta.toComponent(),
-                module.hot ? "" : React.createElement("link", { rel: "canonical", href: "{{ canonical_url }}" }),
                 helmet.link.toComponent(),
                 helmet.style.toComponent(),
                 helmet.script.toComponent(),
-                helmet.noscript.toComponent(),
-                module.hot ? "" : "{{ content_for_header }}"),
-            React.createElement("body", __assign({}, helmet.bodyAttributes.toComponent(), { className: "hold-transition skin-blue sidebar-mini" }),
+                helmet.noscript.toComponent()),
+            React.createElement("body", __assign({}, helmet.bodyAttributes.toComponent()),
                 module.hot ? React.createElement(mobx_react_devtools_1.default, null) : "",
                 this.props.body,
                 this.props.state,
-                this.props.script,
-                module.hot ? "" : "{{content_for_layout}}")));
+                this.props.script)));
     };
     return Html;
 }(React.Component));
